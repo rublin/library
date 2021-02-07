@@ -10,4 +10,10 @@
 
 Створюємо проект, публікуємо його на GitHub, вивчаємо як працює RestController та підключаємо Swagger.
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/J8qwa6nlVpY/0.jpg)](http://www.youtube.com/watch?v=J8qwa6nlVpY "Video Title")
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/J8qwa6nlVpY/0.jpg)](https://www.youtube.com/watch?v=J8qwa6nlVpY "Проект Бібліотека. Урок 1. RestController")
+
+## Урок 2
+
+Створюємо BookService і використовуємо його в RestController
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/UEd9WJxs3nQ/0.jpg)](https://www.youtube.com/watch?v=UEd9WJxs3nQ "Проект Бібліотека. Урок 2. Service")
