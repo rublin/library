@@ -17,3 +17,10 @@
 Створюємо BookService і використовуємо його в RestController
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/UEd9WJxs3nQ/0.jpg)](https://www.youtube.com/watch?v=UEd9WJxs3nQ "Проект Бібліотека. Урок 2. Service")
+
+## Урок 3
+
+Підключаємо базу даних (on-memory) H2, створюємо BookRepository і використовуємо його в BookService
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/Vo3QyntWbOU/0.jpg)](https://www.youtube.com/watch?v=Vo3QyntWbOU "Проект Бібліотека. Урок 3. Repository")
+
