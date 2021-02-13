@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  dev-db:
+    image: postgres:13.1-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: dev-password
+      POSTGRES_USER: dev-user
+      POSTGRES_DB: devdb
+      POSTGRES_ADMIN_PASSWORD: dev-admin-password
