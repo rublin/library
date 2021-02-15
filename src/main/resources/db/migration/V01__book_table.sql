@@ -1,5 +1,5 @@
 create table book(
-    id bigint primary key auto_increment,
+    id bigserial not null,
     name varchar(255) not null ,
     author varchar(255) not null ,
     description text,
