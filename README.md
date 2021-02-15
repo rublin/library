@@ -22,5 +22,8 @@
 
 Підключаємо базу даних (on-memory) H2, створюємо BookRepository і використовуємо його в BookService
 
-[![IMAGE ALT TEXT](https://img.youtube.com/vi/Vo3QyntWbOU/0.jpg)](https://www.youtube.com/watch?v=Vo3QyntWbOU "Проект Бібліотека. Урок 3. Repository")
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/Vo3QyntWbOU/0.jpg)](https://www.youtube.com/watch?v=Vo3QyntWbOU "Проект Бібліотека. Урок 3.1. Repository")
 
+Підключаємо базу даних PostgreSQL за допомогою docker-compose
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/7lLTxvhLkMI/0.jpg)](https://www.youtube.com/watch?v=7lLTxvhLkMI "Проект Бібліотека. Урок 3.2. Repository")
