@@ -27,3 +27,9 @@
 Підключаємо базу даних PostgreSQL за допомогою docker-compose
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/7lLTxvhLkMI/0.jpg)](https://www.youtube.com/watch?v=7lLTxvhLkMI "Проект Бібліотека. Урок 3.2. Repository")
+
+## Урок 3
+
+Пагінація і пошук (фільтр)
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/1-cBrRira8k/0.jpg)](https://www.youtube.com/watch?v=1-cBrRira8k "Проект Бібліотека. Урок 4. Pagination and filtering")
