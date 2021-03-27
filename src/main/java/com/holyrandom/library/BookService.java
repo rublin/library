@@ -20,7 +20,7 @@ public class BookService {
             return optional.get();
         }
 
-        throw new RuntimeException("Book not found");
+        throw new NotFoundException("Book not found");
     }
 
     public Page<Book> getAll(String query, Pageable pageable) {
@@ -31,19 +31,20 @@ public class BookService {
         return page;
     }
 
-    public Book create(Book book) {
+    public Book create(BookDto dto) {
+        Book book = new Book(dto);
         Book saved = bookRepository.save(book);
         return saved;
     }
 
-    public Book update(Long id, Book book) {
+    public Book update(Long id, BookDto dto) {
         Book original = get(id);
-        original.setName(book.getName());
-        original.setAuthor(book.getAuthor());
-        original.setDescription(book.getDescription());
-        original.setPublisher(book.getPublisher());
-        original.setIsbn(book.getIsbn());
-        original.setYear(book.getYear());
+        original.setName(dto.getName());
+        original.setAuthor(dto.getAuthor());
+        original.setDescription(dto.getDescription());
+        original.setPublisher(dto.getPublisher());
+        original.setIsbn(dto.getIsbn());
+        original.setYear(dto.getYear());
 
         Book updated = bookRepository.save(original);
         return updated;
