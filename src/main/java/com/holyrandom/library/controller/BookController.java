@@ -1,5 +1,8 @@
-package com.holyrandom.library;
+package com.holyrandom.library.controller;
 
+import com.holyrandom.library.dto.BookDto;
+import com.holyrandom.library.entity.Book;
+import com.holyrandom.library.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

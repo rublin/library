@@ -1,4 +1,4 @@
-package com.holyrandom.library;
+package com.holyrandom.library.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {
