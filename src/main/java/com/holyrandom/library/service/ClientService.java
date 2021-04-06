@@ -1,5 +1,10 @@
-package com.holyrandom.library;
+package com.holyrandom.library.service;
 
+import com.holyrandom.library.dto.ClientDto;
+import com.holyrandom.library.exception.ConflictException;
+import com.holyrandom.library.exception.NotFoundException;
+import com.holyrandom.library.entity.Client;
+import com.holyrandom.library.repository.ClientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

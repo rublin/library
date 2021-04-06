@@ -1,5 +1,6 @@
-package com.holyrandom.library;
+package com.holyrandom.library.entity;
 
+import com.holyrandom.library.dto.BookDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

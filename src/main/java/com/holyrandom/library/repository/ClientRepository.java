@@ -1,5 +1,6 @@
-package com.holyrandom.library;
+package com.holyrandom.library.repository;
 
+import com.holyrandom.library.entity.Client;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;

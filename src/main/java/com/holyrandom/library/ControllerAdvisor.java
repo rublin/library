@@ -1,5 +1,7 @@
 package com.holyrandom.library;
 
+import com.holyrandom.library.exception.ConflictException;
+import com.holyrandom.library.exception.NotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.holyrandom.library;
+package com.holyrandom.library.dto;
 
 import lombok.Data;
 

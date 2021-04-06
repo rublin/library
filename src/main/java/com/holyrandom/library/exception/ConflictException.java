@@ -1,7 +1,7 @@
-package com.holyrandom.library;
+package com.holyrandom.library.exception;
 
 public class ConflictException extends RuntimeException {
-    ConflictException(String message) {
+    public ConflictException(String message) {
         super(message);
     }
 }
