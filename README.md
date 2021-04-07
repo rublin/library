@@ -28,8 +28,28 @@
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/7lLTxvhLkMI/0.jpg)](https://www.youtube.com/watch?v=7lLTxvhLkMI "Проект Бібліотека. Урок 3.2. Repository")
 
-## Урок 3
+## Урок 4
 
 Пагінація і пошук (фільтр)
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/1-cBrRira8k/0.jpg)](https://www.youtube.com/watch?v=1-cBrRira8k "Проект Бібліотека. Урок 4. Pagination and filtering")
+
+## Урок 5
+
+Пишемо перші тести та підключаємо GitHub Actions
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/EhWn4c4qY0c/0.jpg)](https://www.youtube.com/watch?v=EhWn4c4qY0c "Проект Бібліотека. Урок 5. Tests and GitHub Actions")
+
+## Урок 6
+
+Валідація і обробка помилок
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/5RdbrgF2iVo/0.jpg)](https://www.youtube.com/watch?v=5RdbrgF2iVo "Проект Бібліотека. Урок 6. Validation and exception handling")
+
+
+## Урок 7
+
+Client API 
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/QM0suggMBmI/0.jpg)](https://www.youtube.com/watch?v=QM0suggMBmI "Проект Бібліотека. Урок 7. Client API")
+
