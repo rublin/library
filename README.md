@@ -53,3 +53,9 @@ Client API
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/QM0suggMBmI/0.jpg)](https://www.youtube.com/watch?v=QM0suggMBmI "Проект Бібліотека. Урок 7. Client API")
 
+
+## Урок 8
+
+Book and Client relationship
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/RcJQuMLdZKw/0.jpg)](https://www.youtube.com/watch?v=RcJQuMLdZKw "Проект Бібліотека. Урок 8. Book and Client relationship")
