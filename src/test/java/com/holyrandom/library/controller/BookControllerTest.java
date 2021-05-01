@@ -60,7 +60,8 @@ class BookControllerTest extends AbstractControllerTest {
         mockMvc.perform(get("/book").param("page", "0").param("size", "1").param("query", "author"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.content", hasSize(1)));
+                .andExpect(jsonPath("$.content", hasSize(1)))
+                .andExpect(jsonPath("$.content.[*].bookHistories").doesNotExist());
     }
 
     @Test
