@@ -59,3 +59,9 @@ Client API
 Book and Client relationship
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/RcJQuMLdZKw/0.jpg)](https://www.youtube.com/watch?v=RcJQuMLdZKw "Проект Бібліотека. Урок 8. Book and Client relationship")
+
+## Урок 9
+
+DTO for API
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/-V8rgdYBHl8/0.jpg)](https://www.youtube.com/watch?v=-V8rgdYBHl8 "Проект Бібліотека. Урок 9. API DTO")
