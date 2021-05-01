@@ -62,7 +62,8 @@ class ClientControllerTest extends AbstractControllerTest {
                 .andExpect(jsonPath("$.content.[*].firstName",
                         containsInAnyOrder(testDto1.getFirstName(), testDto2.getFirstName())))
                 .andExpect(jsonPath("$.content.[*].phone",
-                        containsInAnyOrder(testDto1.getPhone(), testDto2.getPhone())));
+                        containsInAnyOrder(testDto1.getPhone(), testDto2.getPhone())))
+                .andExpect(jsonPath("$.content.[*].bookInUses").doesNotExist());
 
 //        get page with filter by name
         mockMvc.perform(get("/client")
