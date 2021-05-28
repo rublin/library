@@ -18,7 +18,6 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -140,9 +139,7 @@ class ClientControllerTest extends AbstractControllerTest {
         dto.setEmail("wrong format");
         dto.setPhone("099-123-11-22");
 
-        mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        createClient(dto)
                 .andDo(print())
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.status", is(HttpStatus.BAD_REQUEST.name())))
@@ -158,29 +155,15 @@ class ClientControllerTest extends AbstractControllerTest {
         ClientDto dto = mockClient();
         createAndAssert(dto);
 
-        mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        createClient(dto)
                 .andDo(print())
                 .andExpect(status().isConflict())
                 .andExpect(jsonPath("$.status", is(HttpStatus.CONFLICT.name())))
                 .andExpect(jsonPath("$.errors", containsInAnyOrder("Client already exists")));
     }
 
-    private ClientDto mockClient() {
-        ClientDto dto = new ClientDto();
-        dto.setFirstName("Ivan");
-        dto.setLastName("Mazepa");
-        dto.setEmail("ivanMoskalivNaduryv@gmail.com");
-        dto.setPhone("+380501234567");
-
-        return dto;
-    }
-
     private Client createAndAssert(ClientDto dto) throws Exception {
-        MvcResult mvcResult = mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        MvcResult mvcResult = createClient(dto)
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.id", not(nullValue())))
                 .andExpect(jsonPath("$.firstName", is(dto.getFirstName())))
