@@ -3,10 +3,8 @@ package com.holyrandom.library.controller;
 import com.holyrandom.library.AbstractControllerTest;
 import com.holyrandom.library.dto.ClientDto;
 import com.holyrandom.library.entity.Client;
-import com.holyrandom.library.repository.ClientRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MvcResult;
@@ -18,16 +16,12 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 class ClientControllerTest extends AbstractControllerTest {
-
-    @Autowired
-    private ClientRepository clientRepository;
 
     @AfterEach
     void clearAfter() {
@@ -140,9 +134,7 @@ class ClientControllerTest extends AbstractControllerTest {
         dto.setEmail("wrong format");
         dto.setPhone("099-123-11-22");
 
-        mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        createClient(dto)
                 .andDo(print())
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.status", is(HttpStatus.BAD_REQUEST.name())))
@@ -158,29 +150,15 @@ class ClientControllerTest extends AbstractControllerTest {
         ClientDto dto = mockClient();
         createAndAssert(dto);
 
-        mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        createClient(dto)
                 .andDo(print())
                 .andExpect(status().isConflict())
                 .andExpect(jsonPath("$.status", is(HttpStatus.CONFLICT.name())))
                 .andExpect(jsonPath("$.errors", containsInAnyOrder("Client already exists")));
     }
 
-    private ClientDto mockClient() {
-        ClientDto dto = new ClientDto();
-        dto.setFirstName("Ivan");
-        dto.setLastName("Mazepa");
-        dto.setEmail("ivanMoskalivNaduryv@gmail.com");
-        dto.setPhone("+380501234567");
-
-        return dto;
-    }
-
     private Client createAndAssert(ClientDto dto) throws Exception {
-        MvcResult mvcResult = mockMvc.perform(post("/client")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(dto)))
+        MvcResult mvcResult = createClient(dto)
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.id", not(nullValue())))
                 .andExpect(jsonPath("$.firstName", is(dto.getFirstName())))
