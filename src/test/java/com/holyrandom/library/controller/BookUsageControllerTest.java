@@ -4,6 +4,7 @@ import com.holyrandom.library.AbstractControllerTest;
 import com.holyrandom.library.entity.Book;
 import com.holyrandom.library.entity.Client;
 import lombok.SneakyThrows;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -33,6 +34,12 @@ class BookUsageControllerTest extends AbstractControllerTest {
 
         var bookResult = createBook(mockBook()).andReturn();
         book = objectMapper.readValue(bookResult.getResponse().getContentAsString(), Book.class);
+    }
+
+    @AfterAll
+    public void clean() {
+        clientRepository.deleteAll();
+        bookRepository.deleteAll();
     }
 
     @Test

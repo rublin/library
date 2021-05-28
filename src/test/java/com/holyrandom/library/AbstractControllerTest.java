@@ -3,6 +3,8 @@ package com.holyrandom.library;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.holyrandom.library.dto.BookDto;
 import com.holyrandom.library.dto.ClientDto;
+import com.holyrandom.library.repository.BookRepository;
+import com.holyrandom.library.repository.ClientRepository;
 import com.holyrandom.library.service.TimeService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,10 @@ public abstract class AbstractControllerTest {
     protected MockMvc mockMvc;
     @Autowired
     protected ObjectMapper objectMapper;
+    @Autowired
+    protected ClientRepository clientRepository;
+    @Autowired
+    protected BookRepository bookRepository;
 
     @MockBean
     protected TimeService timeService;

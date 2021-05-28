@@ -3,10 +3,8 @@ package com.holyrandom.library.controller;
 import com.holyrandom.library.AbstractControllerTest;
 import com.holyrandom.library.dto.ClientDto;
 import com.holyrandom.library.entity.Client;
-import com.holyrandom.library.repository.ClientRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MvcResult;
@@ -24,9 +22,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 class ClientControllerTest extends AbstractControllerTest {
-
-    @Autowired
-    private ClientRepository clientRepository;
 
     @AfterEach
     void clearAfter() {
