@@ -65,3 +65,10 @@ Book and Client relationship
 DTO for API
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/-V8rgdYBHl8/0.jpg)](https://www.youtube.com/watch?v=-V8rgdYBHl8 "Проект Бібліотека. Урок 9. API DTO")
+
+
+## Урок 10
+
+Ендпоінт для expired bookInUse з тестами
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/yLilhI3tpuU/0.jpg)](https://www.youtube.com/watch?v=yLilhI3tpuU "Проект Бібліотека. Урок 10. Expired API")
