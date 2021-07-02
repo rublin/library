@@ -72,3 +72,9 @@ DTO for API
 Ендпоінт для expired bookInUse з тестами
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/yLilhI3tpuU/0.jpg)](https://www.youtube.com/watch?v=yLilhI3tpuU "Проект Бібліотека. Урок 10. Expired API")
+
+## Урок 11
+
+Виправлення N + 1 помилки для expired bookInUse
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/D1qAN9m1m6k/0.jpg)](https://www.youtube.com/watch?v=D1qAN9m1m6k "Проект Бібліотека. Урок 11. N+1 issue")
