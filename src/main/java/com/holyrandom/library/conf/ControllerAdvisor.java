@@ -1,4 +1,4 @@
-package com.holyrandom.library;
+package com.holyrandom.library.conf;
 
 import com.holyrandom.library.exception.ConflictException;
 import com.holyrandom.library.exception.NotFoundException;
