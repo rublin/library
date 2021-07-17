@@ -78,3 +78,18 @@ DTO for API
 Виправлення N + 1 помилки для expired bookInUse
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/D1qAN9m1m6k/0.jpg)](https://www.youtube.com/watch?v=D1qAN9m1m6k "Проект Бібліотека. Урок 11. N+1 issue")
+
+
+## Урок 12 - Spring Security
+
+### Урок 12.1
+
+Додаємо Spring Security до проєкту і робимо невеличку конфігурацію
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/F3a5OqNtB38/0.jpg)](https://www.youtube.com/watch?v=F3a5OqNtB38 "Бібліотека. Spring Security (Урок 12.1)")
+
+### Урок 12.2
+
+Конфігуруємо Spring Security для перевірки користувачів з бази
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/kFtz8UJYsko/0.jpg)](https://www.youtube.com/watch?v=kFtz8UJYsko "Бібліотека. Spring Security (Урок 12.2)")
