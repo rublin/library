@@ -1,6 +1,7 @@
 package com.holyrandom.library.entity;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +19,7 @@ public class ApplicationUser {
     private String firstName;
     private String lastName;
     private String email;
+    @ToString.Exclude
     private String password;
     private boolean enabled = true;
     private boolean locked;
